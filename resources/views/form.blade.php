@@ -1,5 +1,6 @@
 @extends('app')
 @section('css')
+    <link href="{{ asset('/css/basic.min.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/dropzone.min.css') }}" rel="stylesheet">
 @endsection
 @section('content')
@@ -41,7 +42,7 @@
                     myDropzone.processQueue();
                 });
                 this.on("addedfile", function(file) {
-                    alert("file uploaded");
+                    console.log('File added');
                 });
 
                 this.on("complete", function(file) {
