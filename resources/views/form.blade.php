@@ -1,6 +1,6 @@
 @extends('app')
 @section('css')
-    <link href="{{ asset('/css/dropzone.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/dropzone.min.css') }}" rel="stylesheet">
 @endsection
 @section('content')
     <div class="container">
@@ -23,13 +23,13 @@
     </div>
 @endsection
 @section('scripts')
-    {!! Html::script('js/dropzone.js'); !!}
+    {!! Html::script('js/dropzone.min.js'); !!}
     <script>
         Dropzone.options.myDropzone = {
             autoProcessQueue: false,
             uploadMultiple: true,
             maxFilezise: 10,
-            maxFiles: 2,
+            maxFiles: 10,
 
             init: function() {
                 var submitBtn = document.querySelector("#submit");
