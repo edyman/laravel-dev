@@ -16,7 +16,9 @@ class FileController extends Controller
         }
     }
 
-    public function index(){
+    public function index(Request $request){
+        if ($request->ajax())
+            return view('partials.dropzone')->render();
         return view('form');
     }
 }
